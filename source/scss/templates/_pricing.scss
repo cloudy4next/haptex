@@ -2,13 +2,10 @@
   Pricing section
 ==================================================================*/
 .price-item {
-  color: #353b43;
-  // border: 1px solid $border-color;
-  // padding-bottom: 30px;
-  // margin: 15px 0;
-
+  border: 1px solid $border-color;
+  padding-bottom: 30px;
+  margin: 15px 0;
 }
-
 
 .price-title {
   background-color: $section-bg;
@@ -31,13 +28,7 @@
   }
 }
 
-.pricing {
-    background: #f2f2f2;
 
-    h2 {
-        color: $primary-color;
-      }
-}
 
 
 

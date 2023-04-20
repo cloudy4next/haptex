@@ -501,7 +501,7 @@ a:hover {
   Navigation
 ==================================================================*/
 .navigation {
-  background-color: #373a3c;
+  background-color: #1d2024;
   width: 100%;
   z-index: 99;
   margin-bottom: 0;
@@ -644,19 +644,12 @@ a:hover {
 /*=================================================================
   About us section
 ==================================================================*/
-.about {
-  background: #f2f2f2;
-}
-.about h2 {
-  color: #57cbcc;
-}
 .about .block {
-  background: #004D40;
+  background: #242930;
   padding: 30px;
   border-bottom: 2px solid transparent;
   transition: 0.5s all;
   margin-bottom: 20px;
-  box-shadow: 2px 2px 5px rgba(39, 3, 243, 0.3), 13px 13px 0 rgba(39, 3, 243, 0.3);
 }
 .about .block:hover {
   border-bottom: 2px solid #57cbcc;
@@ -868,7 +861,9 @@ a:hover {
   Pricing section
 ==================================================================*/
 .price-item {
-  color: #353b43;
+  border: 1px solid rgba(236, 239, 241, 0.07);
+  padding-bottom: 30px;
+  margin: 15px 0;
 }
 
 .price-title {
@@ -887,13 +882,6 @@ a:hover {
 .price-title .value {
   color: #57cbcc;
   font-size: 30px;
-}
-
-.pricing {
-  background: #f2f2f2;
-}
-.pricing h2 {
-  color: #57cbcc;
 }
 
 .pricing li {
@@ -1004,49 +992,15 @@ a:hover {
   Services section
 ==================================================================*/
 .service-block {
-  background: #004D40;
-  padding: 30px;
-  border-bottom: 2px solid transparent;
-  transition: 0.5s all;
-  margin-bottom: 20px;
-  box-shadow: 2px 2px 5px rgba(39, 3, 243, 0.3), 13px 13px 0 rgba(39, 3, 243, 0.3);
+  padding: 60px 20px;
+  border-left: 1px solid rgba(236, 239, 241, 0.07);
+  border-top: 1px solid rgba(236, 239, 241, 0.07);
+  margin-bottom: 40px;
+  box-shadow: 2px 2px 5px rgba(44, 44, 44, 0.3), 13px 13px 0 rgba(255, 255, 255, 0.7);
 }
 .service-block .service-icon {
-  position: relative;
-  width: 160px;
-  height: 92.38px;
-  background-color: transparent;
-  margin: 46.19px auto 60px;
-  padding: 20px 0;
-  border-left: 2px solid rgba(236, 239, 241, 0.07);
-  border-right: 2px solid rgba(236, 239, 241, 0.07);
+  margin-bottom: 10px;
   font-size: 50px;
-  transform: translateZ(0px);
-  transition-duration: 0.3s;
-  transition-property: transform;
-}
-.service-block .service-icon:after, .service-block .service-icon:before {
-  content: "";
-  position: absolute;
-  z-index: 1;
-  width: 113.14px;
-  height: 113.14px;
-  background-color: inherit;
-  left: 20.4315px;
-  transform: scaleY(0.5774) rotate(-45deg);
-}
-.service-block .service-icon:before {
-  top: -56.5685px;
-  border-top: 2px solid rgba(236, 239, 241, 0.07);
-  border-right: 2px solid rgba(236, 239, 241, 0.07);
-}
-.service-block .service-icon:after {
-  bottom: -56.5685px;
-  border-bottom: 2px solid rgba(236, 239, 241, 0.07);
-  border-left: 2px solid rgba(236, 239, 241, 0.07);
-}
-.service-block .service-icon h3 {
-  color: #afbac4;
 }
 
 /*=================================================================
