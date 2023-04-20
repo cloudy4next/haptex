@@ -2,14 +2,66 @@
   Services section
 ==================================================================*/
 .service-block {
-  padding: 60px 20px;
-  border-left: 1px solid $border-color;
-  border-top: 1px solid $border-color;
-  margin-bottom: 40px;
-  box-shadow:2px 2px 5px rgba(44, 44, 44, .3), 13px 13px 0 rgba(256, 256, 256, .7);
+
+
+  background: #004D40;
+  padding: 30px;
+  border-bottom: 2px solid transparent;
+  transition: .5s all;
+  margin-bottom: 20px;
+  box-shadow: 2px 2px 5px rgba(39, 3, 243, 0.3), 13px 13px 0 rgba(39, 3, 243, 0.3);
+  // padding: 60px 20px;
+  // border-left: 1px solid $border-color;
+  // border-top: 1px solid $border-color;
+  // margin-bottom: 40px;
+  // box-shadow:2px 2px 5px rgba(39, 3, 243, 0.3), 13px 13px 0 rgba(39, 3, 243, 0.3);
+  // .service-icon {
+  //   margin-bottom: 10px;
+  //   font-size: 50px;
+  // }
+
   .service-icon {
-    margin-bottom: 10px;
+    position: relative;
+    width: 160px;
+    height: 92.38px;
+    background-color: transparent;
+    margin: 46.19px auto 60px;
+    padding: 20px 0;
+    border-left: 2px solid $border-color;
+    border-right: 2px solid $border-color;
     font-size: 50px;
+    transform: translateZ(0px);
+    transition-duration: 0.3s;
+    transition-property: transform;
+
+    &:after,
+    &:before {
+      content: "";
+      position: absolute;
+      z-index: 1;
+      width: 113.14px;
+      height: 113.14px;
+      background-color: inherit;
+      left: 20.4315px;
+      transform: scaleY(0.5774) rotate(-45deg);
+    }
+
+    &:before {
+      top: -56.5685px;
+      border-top: 2px solid rgba(236, 239, 241, 0.07);
+      border-right: 2px solid rgba(236, 239, 241, 0.07);
+    }
+
+    &:after {
+      bottom: -56.5685px;
+      border-bottom: 2px solid rgba(236, 239, 241, 0.07);
+      border-left: 2px solid rgba(236, 239, 241, 0.07);
+    }
+
+    h3 {
+      color: #afbac4;
+    }
+
   }
 }
 

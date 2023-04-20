@@ -2,12 +2,17 @@
   About us section
 ==================================================================*/
 .about {
+    background: #f2f2f2;
+    h2 {
+        color: $primary-color;
+      }
   .block {
-    background: #242930;
+    background: #004D40;
     padding: 30px;
     border-bottom: 2px solid transparent;
     transition: .5s all;
     margin-bottom: 20px;
+    box-shadow: 2px 2px 5px rgba(39, 3, 243, 0.3), 13px 13px 0 rgba(39, 3, 243, 0.3);
 
     &:hover {
       border-bottom: 2px solid $primary-color;
@@ -70,6 +75,7 @@
   About us 2 section
 ==================================================================*/
 .about-2 {
+
   .content-block {
     padding: 35px 40px;
     @include tablet {
