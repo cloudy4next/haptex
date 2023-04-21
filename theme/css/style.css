@@ -1522,6 +1522,28 @@ a:hover {
   border: 1px solid #57cbcc;
 }
 
+.skill-bar p {
+  font-size: 18px;
+  margin-bottom: 0;
+}
+.skill-bar p span {
+  font-style: italic;
+  font-size: 30px;
+  color: rgba(187, 187, 187, 0.34);
+  display: inline-block;
+  vertical-align: middle;
+}
+.skill-bar .progress {
+  height: 6px;
+  border-radius: 0;
+}
+.skill-bar .progress .progress-bar {
+  background: #57cbcc;
+}
+.skill-bar li:not(:last-child) {
+  margin-bottom: 25px;
+}
+
 /*=================================================================
 	Twitter Feed
 ==================================================================*/

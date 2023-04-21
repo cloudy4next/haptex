@@ -129,20 +129,17 @@ Sticky Navigation
               <li class="nav-item">
                 <a class="nav-link" href="#about">About</a>
               </li>
-              <!-- <li class="nav-item">
+              <li class="nav-item">
               <a class="nav-link" href="#services">Services</a>
-            </li> -->
+            </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#pricing">Factory</a>
+              </li>
               <li class="nav-item">
                 <a class="nav-link" href="#portfolio">Portfolio</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#our-team">Team</a>
-              </li>
-              <li class="nav-item">
-              <a class="nav-link" href="#pricing">Factory</a>
-            </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#blog">Blog</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#contact-us">Contact</a>
@@ -227,14 +224,14 @@ End Sticky Navigation
 </section> <!-- End section -->
 
 
-<section class="section about-2 padding-0 bg-white" id="about">
+<section class="section about-2 padding-0 bg-black" id="about">
   <div class="container-fluid p-0">
     <div class="row no-gutters align-items-center">
       <div class="col-lg-6">
         <img class="img-fluid" src="images/about/about.jpg" alt="">
       </div>
       <div class="col-lg-6">
-        <div class="content-block" style="color: #000000;">
+        <div class="content-block">
           <h2>We’re Haptex Apparel Group.</h2>
           <p>Haptex Apparel Group. is a 100% export oriented Garment Industry located in Gazipur. The factory is
             equipped with
@@ -395,65 +392,133 @@ Start Call To Action
 		=========================================== -->
 
 <section id="team-skills" class="parallax-section section section-bg overly">
+  <div class="container">
+    <div class="row">
+      <!-- section title -->
+      <div class="col-md-12">
+        <div class="title text-center">
+          <h2>Our <span class="color">strength</span></h2>
+          <div class="border"></div>
+        </div>
+      </div>
+      <!-- /section title -->
+    </div> <!-- End row -->
+    <div class="row">
+      <div class="col-md-6">
+        <canvas id="myChart"></canvas>
+      </div>
+      <div id="piechart_3d" class="col-md-6 mt-4 mt-md-0"></div>
+    </div>
+
+
+  </div> <!-- End container -->
+</section> <!-- End section -->
+
+
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<script type="text/javascript">
+  google.charts.load("current", { packages: ["corechart"] });
+  google.charts.setOnLoadCallback(drawChart);
+  function drawChart() {
+    var data = google.visualization.arrayToDataTable([
+      ['Mix', 'Per Product'],
+      ['Melange', 69],
+      ['PC-CVC', 7],
+      ['Polyester Polyamide', 10],
+      ['Organic Cotton', 4],
+      ['COtton-Visco-Modal-Elastane', 10]
+    ]);
+
+    var options = {
+      backgroundColor: "#353b43",
+
+      title: 'Fabric Mix',
+      is3D: true,
+    };
+
+    var chart = new google.visualization.PieChart(document.getElementById('piechart_3d'));
+    chart.draw(data, options);
+  }
+</script>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+<script>
+  var xValues = ["PRIMARK", "GIANT TIGER", "NKD + PIERRE CARDIN", "SMYK + DELTA + HONEYS", "MLP + MATALAN", "OTHERS"];
+  var yValues = [30, 20, 20, 10, 10, 10, 0];
+  var barColors = ["red", "green", "blue", "orange", "brown", "yellow"];
+
+  new Chart("myChart", {
+    type: "bar",
+    data: {
+      labels: xValues,
+      datasets: [{
+        backgroundColor: barColors,
+        data: yValues
+      }]
+    },
+    options: {
+      legend: { display: false },
+      title: {
+        display: true,
+        text: "Export Share"
+      }
+    }
+  });
+</script>
+
+
+<!-- Start Pricing section
+=========================================== -->
+
+<section id="pricing" class="pricing section section-bg">
 	<div class="container">
 		<div class="row">
-			<!-- section title -->
-			<div class="col-md-12">
-				<div class="title text-center">
-					<h2>Our <span class="color">Skills</span></h2>
+
+			<div class="col-12">
+				<!-- section title -->
+				<div class="title text-center wow fadeInDown" data-wow-duration="500ms">
+					<h2>Factory <span class="color">Profile</span></h2>
 					<div class="border"></div>
 				</div>
+				<!-- /section title -->
 			</div>
-			<!-- /section title -->
+
+
+			<!-- single pricing table -->
+			<div class="col-lg-6 col-md-6 text-center wow fadeInUp" data-wow-duration="500ms"
+				data-wow-delay="400ms">
+				<div class="price-item" >
+
+					<!-- plan name & value -->
+					<div class="price-title">
+						<h3>Euro Tex</h3>
+					</div>
+					<a class="btn btn-transparent" href="pdf/euroTex.pdf" download>Download</a>
+				</div>
+			</div>
+			<!-- end single pricing table -->
+
+			<!-- single pricing table -->
+			<div class="col-lg-6 col-md-6 text-center wow fadeInUp" data-wow-duration="500ms"
+				data-wow-delay="600ms">
+				<div class="price-item">
+					<div class="price-title">
+						<h3>HI-TECH</h3>
+					</div>
+					<a class="btn btn-transparent" href="pdf/hi_tech.pdf" download>Download</a>
+
+				</div>
+			</div>
+			<!-- end single pricing table -->
+
+
 		</div> <!-- End row -->
-		<div class="row">
-			<div class="col-md-6">
-				<h2>We’ve skilled in wide range of Grament Industry and <br>
-					Sorucing.</h2>
-				<!-- <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis magni explicabo cum aperiam recusandae
-					sunt accusamus totam. Quidem quos fugiat sapiente numquam accusamus quas hic, itaque in libero reiciendis
-					tempora!</p> -->
-				<img class="img-fluid" src="images/about/company-growth.png" alt="">
-			</div>
-			<div class="col-md-6 mt-4 mt-md-0">
-				<ul class="skill-bar">
-					<li>
-						<p><span>01-</span> Business Development</p>
-						<div class="progress">
-							<div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"
-								style="width:90%">
-							</div>
-						</div>
-					</li>
-					<li>
-						<p><span>02-</span> Analysis</p>
-						<div class="progress">
-							<div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"
-								style="width:70%">
-							</div>
-						</div>
-					</li>
-					<li>
-						<p><span>03-</span> Design</p>
-						<div class="progress">
-							<div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"
-								style="width:85%">
-							</div>
-						</div>
-					</li>
-					<li>
-						<p><span>04-</span> Product Quality</p>
-						<div class="progress">
-							<div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"
-								style="width:100%">
-							</div>
-						</div>
-					</li>
-				</ul>
-			</div>
-		</div>
 	</div> <!-- End container -->
 </section> <!-- End section -->
+
+
+
 
 
 <!-- Start Portfolio Section
@@ -798,54 +863,7 @@ Start Our Team
 </section> <!-- End section -->
 
 
-<!-- Start Pricing section
-=========================================== -->
 
-<section id="pricing" class="pricing section section-bg">
-	<div class="container">
-		<div class="row">
-
-			<div class="col-12">
-				<!-- section title -->
-				<div class="title text-center wow fadeInDown" data-wow-duration="500ms">
-					<h2>Factory <span class="color">Profile</span></h2>
-					<div class="border"></div>
-				</div>
-				<!-- /section title -->
-			</div>
-
-
-			<!-- single pricing table -->
-			<div class="col-lg-6 col-md-6 text-center wow fadeInUp" data-wow-duration="500ms"
-				data-wow-delay="400ms">
-				<div class="price-item" >
-
-					<!-- plan name & value -->
-					<div class="price-title">
-						<h3>SAWFTEX LTD</h3>
-					</div>
-					<a class="btn btn-transparent" href="pdf/sawftex.pdf" download>Download</a>
-				</div>
-			</div>
-			<!-- end single pricing table -->
-
-			<!-- single pricing table -->
-			<div class="col-lg-6 col-md-6 text-center wow fadeInUp" data-wow-duration="500ms"
-				data-wow-delay="600ms">
-				<div class="price-item">
-					<div class="price-title">
-						<h3>HI-TECH</h3>
-					</div>
-					<a class="btn btn-transparent" href="pdf/hi_tech.pdf" download>Download</a>
-
-				</div>
-			</div>
-			<!-- end single pricing table -->
-
-
-		</div> <!-- End row -->
-	</div> <!-- End container -->
-</section> <!-- End section -->
 
 
 <!-- Start Testimonial
@@ -926,16 +944,16 @@ Start Our Team
 =========================================== -->
 <section id="contact-us" class="contact-us section-bg">
 	<div class="container">
-		<div class="row">
 
-			<div class="col-12">
-				<!-- section title -->
-				<div class="title text-center wow fadeIn" data-wow-duration="500ms">
-					<h2>Get In <span class="color">Touch</span></h2>
-					<div class="border"></div>
-				</div>
-				<!-- /section title -->
-			</div>
+    <div class="col-12">
+      <!-- section title -->
+      <div class="title text-center wow fadeIn" data-wow-duration="500ms">
+        <h2>Get In <span class="color">Touch</span></h2>
+        <div class="border"></div>
+      </div>
+      <!-- /section title -->
+    </div>
+		<div class="row">
 
 			<!-- Contact Details -->
         <div class="contact-info col-lg-6 wow fadeInUp" data-wow-duration="500ms">
@@ -993,7 +1011,39 @@ Start Our Team
         </div>
 			<!-- ./End Contact Form -->
 
-		</div> <!-- end row -->
+		</div>
+
+    <!-- end row -->
+        <div class="row" style="margin-top: 20px;">
+
+          <!-- Contact Details -->
+          <div class="contact-info col-lg-6 wow fadeInUp" data-wow-duration="500ms">
+            <h3>Canada</h3>
+            <div class="contact-details">
+              <div class="con-info clearfix">
+                <i class="tf-map-pin"></i>
+                <span>9945 167 Street NW Edmonton AB T5P Canada</span>
+              </div>
+
+              <div class="con-info clearfix">
+                <i class="tf-ion-ios-telephone-outline"></i>
+                <span>Tel: 001-780-554-1869</span>
+              </div>
+
+              <div class="con-info clearfix">
+                <i class="tf-ion-iphone"></i>
+                <span>Fax: 001-780-554-5050</span>
+              </div>
+
+              <div class="con-info clearfix">
+                <i class="tf-ion-ios-email-outline"></i>
+                <span>Email: patrick@haptexapparel.com</span>
+              </div>
+            </div>
+          </div>
+          <!-- / End Contact Details -->
+
+        </div>
 	</div> <!-- end container -->
 
 </section> <!-- end section -->
